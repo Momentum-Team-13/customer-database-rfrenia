@@ -47,6 +47,11 @@ for (let customer of customers) {
   contentElement.appendChild(sinceElement)
 
   datalog.appendChild(customerElement)
+
+  console.log (customer.location.state)
   }
+
+
+  
 
 

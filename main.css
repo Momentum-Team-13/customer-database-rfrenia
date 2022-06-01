@@ -28,6 +28,7 @@ img {
     border-top-left-radius: 100px;
     border-bottom-right-radius: 50px;
     padding-top: 50px;
+    padding-bottom: -10px;
 }
 
 .dob {
