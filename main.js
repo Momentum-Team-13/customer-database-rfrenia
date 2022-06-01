@@ -5,6 +5,7 @@ const datalog = document.querySelector('#data')
 
 
 for (let customer of customers) {
+
   let customerElement = document.createElement('div')
   customerElement.classList.add('customer')
   
@@ -25,7 +26,7 @@ for (let customer of customers) {
 
   let peopleElement = document.createElement('h2')
   peopleElement.classList.add("people")
-  peopleElement.innerText = ` ${customer.name.first} ${customer.name.last}`
+  peopleElement.innerText = ` ${customer.name.first.charAt(0).toUpperCase(0) + customer.name.first.slice(1)} ${customer.name.last.charAt(0).toUpperCase(0) + customer.name.last.slice(1)} `
   contentElement.appendChild(peopleElement)
 
   let emailElement = document.createElement('div')
@@ -50,8 +51,10 @@ for (let customer of customers) {
   sinceElement.innerText = `Customer since: ${Date(customer.registered.date).substring(4,16)}`
   contentElement.appendChild(sinceElement)
 
+  
   customerElement.appendChild(contentElement)
   datalog.appendChild(customerElement)
   }
+  
 
 

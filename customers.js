@@ -1,5 +1,5 @@
 
-console.log("show natty 2")
+
 
 const customers = [
   {
