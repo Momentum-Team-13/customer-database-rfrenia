@@ -16,6 +16,13 @@ for (let customer of customers) {
 
   customerElement.appendChild(contentElement)
 
+  let imageElement = document.createElement('img')
+  imageElement.src = `${customer.picture.large}`
+  imageElement.alt = 'photos of customers'
+  imageElement.classList.add("img")
+  contentElement.appendChild(imageElement)
+  customerElement.appendChild(contentElement)
+
   let peopleElement = document.createElement('h2')
   peopleElement.classList.add("people")
   peopleElement.innerText = ` ${customer.name.first} ${customer.name.last}`
@@ -28,13 +35,15 @@ for (let customer of customers) {
 
   let addressElement = document.createElement ('div')
   addressElement.classList.add('address')
-  addressElement.innerText = ` ${customer.location.street.number} ${customer.location.street.name} ${customer.location.city}, ${customer.location.state} ${customer.location.postcode}`
+  addressElement.innerText = ` ${customer.location.street.number} ${customer.location.street.name} 
+  ${customer.location.city}, ${customer.location.state} ${customer.location.postcode}`
   contentElement.appendChild(addressElement)
 
   let dobElement = document.createElement ('div')
   dobElement.classList.add('dob')
   dobElement.innerText = `DOB: ${Date(customer.dob.date).substring(4,16)}`
   contentElement.appendChild(dobElement)
+
 
   let sinceElement = document.createElement ('div')
   sinceElement.classList.add('since')

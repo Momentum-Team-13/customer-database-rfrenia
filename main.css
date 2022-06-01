@@ -1,4 +1,11 @@
-#data{
+h1 {
+padding-left: 100px;
+font-style: italic;
+font-size: 50px;
+background-color: beige;
+}
+
+#data {
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 position: absolute;
@@ -6,15 +13,27 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 width: 100%;
-height: auto;
+height: 75%;
 }
-.customer{
-background-color: rgb(142, 193, 248);
-border: 1px solid orange;
+.customer {
+background-color: rgb(214, 226, 238);
+border: 1px  ;
 font-size: 1rem;
 text-align: center;
 display: inline;
 font: inherit;
 }
 
+img {
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 50px;
+    padding-top: 50px;
+}
 
+.dob {
+    padding-top: 7px;
+}
+.email{
+    padding-bottom: 10px;
+    color: rgb(103, 103, 246);
+}
