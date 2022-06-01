@@ -11,10 +11,6 @@ for (let customer of customers) {
   
   let contentElement = document.createElement('article')
   contentElement.classList.add("display")
-
-  let infoElement = document.createElement('div')
-  infoElement.classList.add("p2")
-
   customerElement.appendChild(contentElement)
 
   let imageElement = document.createElement('img')
@@ -22,7 +18,6 @@ for (let customer of customers) {
   imageElement.alt = 'photos of customers'
   imageElement.classList.add("img")
   contentElement.appendChild(imageElement)
-  customerElement.appendChild(contentElement)
 
   let peopleElement = document.createElement('h2')
   peopleElement.classList.add("people")
@@ -42,19 +37,16 @@ for (let customer of customers) {
 
   let dobElement = document.createElement ('div')
   dobElement.classList.add('dob')
-  dobElement.innerText = `DOB: ${Date(customer.dob.date).substring(4,16)}`
+  dobElement.innerText = `DOB: ${new Date(customer.dob.date).toDateString().substring(4,10)}, ${new Date(customer.dob.date).toDateString().substring(11,15)}`
   contentElement.appendChild(dobElement)
 
 
   let sinceElement = document.createElement ('div')
   sinceElement.classList.add('since')
-  sinceElement.innerText = `Customer since: ${Date(customer.registered.date).substring(4,16)}`
+  sinceElement.innerText = `Customer Since: ${new Date(customer.registered.date).toDateString().substring(4,10)}, ${new Date(customer.registered.date).toDateString().substring (11,15)}`
   contentElement.appendChild(sinceElement)
 
-  
-  customerElement.appendChild(contentElement)
   datalog.appendChild(customerElement)
   }
-  
 
 
