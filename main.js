@@ -29,10 +29,12 @@ for (let customer of customers) {
   emailElement.innerText = ` ${customer.email}`
   contentElement.appendChild(emailElement)
 
+  let stateAbr = nameToAbbr(customer.location.state)
+
   let addressElement = document.createElement ('div')
   addressElement.classList.add('address')
   addressElement.innerText = ` ${customer.location.street.number} ${customer.location.street.name} 
-  ${customer.location.city}, ${customer.location.state} ${customer.location.postcode}`
+  ${customer.location.city}, ${stateAbr} ${customer.location.postcode}`
   contentElement.appendChild(addressElement)
 
   let dobElement = document.createElement ('div')
@@ -45,13 +47,9 @@ for (let customer of customers) {
   sinceElement.classList.add('since')
   sinceElement.innerText = `Customer Since: ${new Date(customer.registered.date).toDateString().substring(4,10)}, ${new Date(customer.registered.date).toDateString().substring (11,15)}`
   contentElement.appendChild(sinceElement)
+ 
 
   datalog.appendChild(customerElement)
 
   console.log (customer.location.state)
   }
-
-
-  
-
-
